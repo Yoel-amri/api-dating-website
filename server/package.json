@@ -1,0 +1,35 @@
+{
+  "name": "matcha-2.0",
+  "version": "1.0.0",
+  "description": "Dating-website-api",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "initDb": "node scripts/createMatchaDatabase.js",
+    "users": "node src/users/users.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yoel-amri/Matcha-dating-website.git"
+  },
+  "author": "yel-amri, mobouzar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yoel-amri/Matcha-dating-website/issues"
+  },
+  "homepage": "https://github.com/Yoel-amri/Matcha-dating-website#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.5",
+    "dayjs": "^1.10.7",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "multer": "^1.4.3",
+    "mysql2": "^2.2.5",
+    "nodemailer": "^6.6.3",
+    "nodemon": "^2.0.7",
+    "path": "^0.12.7",
+    "uuid": "^8.3.2"
+  }
+}

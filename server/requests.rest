@@ -1,0 +1,162 @@
+### SIGNUP
+POST http://localhost:9000/api/users/signUp
+Content-Type: application/json
+
+{
+    "username": "yassine",
+    "email": "muhammedboeu@gmail.com",
+    "password": "Test@1234",
+    "passwordConfirmation": "Test@1234",
+    "firstname": "simo",
+    "lastname": "simox"
+}
+### CONFRIM MAIL
+GET http://localhost:9000/api/users/confirmMail/eyJhbGciOiJIUzI1NiJ9.eWVsYW1yaQ.PDMIpdPMvaHJHGetO7yrNyd9NDzZgIbDHndza1rY8ww
+Content-Type: application/json
+
+### LOGIN
+POST http://localhost:9000/api/users/login
+Content-Type: application/json
+
+{
+    "username": "yassine",
+    "password": "Test@1234"
+}
+
+### UPDATE USER
+POST http://localhost:9000/api/users/update
+Content-Type: application/json
+
+{
+    "password": "Test@12345",
+    "passwordConfirmation": "Test@12345"
+}
+
+### Get user data
+GET  http://localhost:9000/api/users/getUserData/c2ef5500-edbf-4f08-aa81-a0eaf0b06b8b
+Content-Type: application/json
+
+{
+    "picture": "true",
+    "tag": "true",
+    "tag": "true",
+    "view": "true",
+    "like": "true",
+    "match": "true",
+    "report": "klkl",
+    "block": "klkl",
+    "match": "true"
+}
+
+###
+POST http://localhost:9000/api/users/logOut
+
+
+###
+POST http://localhost:9000/api/users/like
+Content-Type: application/json
+
+{
+    "user_id" : "c2ef5500-edbf-4f08-aa81-a0eaf0b06b8b"
+}
+
+###
+POST http://localhost:9000/api/users/unlike
+Content-Type: application/json
+
+{
+    "user_id" : "c2ef5500-edbf-4f08-aa81-a0eaf0b06b8b"
+}
+
+###
+
+POST http://localhost:9000/api/users/view
+Content-Type: application/json
+
+{
+    "user_id" : "c2ef5500-edbf-4f08-aa81-a0eaf0b06b8b"
+}
+
+###
+POST http://localhost:9000/api/messages/sendMessage
+Content-Type: application/json
+
+{
+    "message": "hello there how are you",
+    "reciever_id" : "9ba6f71a-7bd6-40db-8858-72f284b2a479"
+}
+
+###
+GET http://localhost:9000/api/messages/getMessage/c5a4da71-d8e2-4258-a242-44e95537e72c
+
+
+###
+
+POST http://localhost:9000/api/users/resetPassword
+Content-Type: application/json
+
+{
+    "username" : "yassine",
+    "password" : "Test@test1",
+    "passwordConfirmation" : "Test@test1"
+}
+
+###
+POST http://localhost:9000/api/notifications/sendNotification
+Content-Type: application/json
+
+{
+    "notification_type": "message1",
+    "receiver" : "955b83ec-575d-4927-95e9-0a106f85ccbc"
+}
+
+###
+POST http://localhost:9000/api/users/block
+Content-Type: application/json
+
+{
+    "blockedId": "c2ef5500-edbf-4f08-aa81-a0eaf0b06b8b"
+}
+
+###
+POST http://localhost:9000/api/users/report
+Content-Type: application/json
+
+{
+    "reportedId": "c2ef5500-edbf-4f08-aa81-a0eaf0b06b8b"
+}
+
+####
+GET http://localhost:9000/api/matching/profiles?age=18&age=40&sortBy=tags&tags=sex&tags=asss
+Content-Type: application/json
+
+POST http://localhost:9000/api/users/upload/photos
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="photos"; filename="test.png"
+Content-Type: image/png
+
+< ./test.png
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="photos"; filename="test2.png"
+Content-Type: image/png
+
+
+< ./test2.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="photos"; filename="test2.png"
+Content-Type: image/png
+
+
+< ./test2.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="photos"; filename="test2.png"
+Content-Type: image/png
+
+
+< ./test2.png
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
